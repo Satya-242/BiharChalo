@@ -113,24 +113,12 @@
     <div class="container">
         <h1>BiharChalo</h1>
         <p>Upload your <b>Transaction</b> dataset (CSV file).</p>
-        <form id="uploadForm" enctype="multipart/form-data">
-            <label for="transactionDataset">Transaction Dataset (CSV):</label>
-            <input type="file" id="transactionDataset" name="transactionDataset" accept=".csv" required>
+        <form id="uploadForm" method="post" action="/" enctype="multipart/form-data">
+            <label for="csvfile">Transaction Dataset (CSV):</label>
+            <input type="file" id="csvfile" name="csvfile" accept=".csv" required>
             <button type="submit">Upload</button>
         </form>
         <div id="message"></div>
     </div>
-    <script>
-        document.getElementById('uploadForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const transactionDataset = document.getElementById('transactionDataset').files[0];
-            if (!transactionDataset) {
-                document.getElementById('message').textContent = "Please select the transaction dataset.";
-                return;
-            }
-            document.getElementById('message').textContent = "File ready to be uploaded (backend integration needed).";
-            // Here you would add AJAX or fetch to send file to your backend
-        });
-    </script>
 </body>
 </html>

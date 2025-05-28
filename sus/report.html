@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fraud Detection Report</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        h1, h2 { color: #2c3e50; }
+        img { max-width: 700px; margin: 20px 0; border: 1px solid #ccc; }
+        table { border-collapse: collapse; width: 100%; margin-top: 30px; }
+        th, td { border: 1px solid #ccc; padding: 6px 10px; text-align: left; }
+        th { background: #f4f4f4; }
+        .img-section { margin-bottom: 40px; }
+    </style>
+</head>
+<body>
+    <h1>Fraud Detection Report</h1>
+
+    <div class="img-section">
+        <h2>1. Total Fraud Amount by Range</h2>
+        <img src="{{ url_for('image', filename='fraud_amount_by_range.png') }}" alt="Fraud Amount by Range">
+    </div>
+    <div class="img-section">
+        <h2>2. Fraud Amount Distribution by Sender Bank</h2>
+        <img src="{{ url_for('image', filename='fraud_amount_by_bank.png') }}" alt="Fraud Amount by Sender Bank">
+    </div>
+    <div class="img-section">
+        <h2>3. Transaction Frequency Over Time</h2>
+        <img src="{{ url_for('image', filename='transaction_frequency.png') }}" alt="Transaction Frequency Over Time">
+    </div>
+
+    <h2>Sampled Transactions Table</h2>
+    <div>
+        <iframe src="{{ url_for('csvfile', filename='sampled_transactions.csv') }}" width="100%" height="500"></iframe>
+        <p style="color: #888; font-size: 0.95em;">(If the table does not display, open the CSV file directly.)</p>
+    </div>
+</body>
+</html>
