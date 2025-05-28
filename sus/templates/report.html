@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fraud Detection Report</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:600,400&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', Arial, sans-serif;
+            background: linear-gradient(135deg, #2e5b9c 0%, #6dd5ed 100%);
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 900px;
+            margin: 40px auto 40px auto;
+            background: rgba(255,255,255,0.97);
+            border-radius: 18px;
+            box-shadow: 0 8px 32px rgba(46,91,156,0.18), 0 1.5px 8px rgba(0,0,0,0.07);
+            padding: 40px 32px 32px 32px;
+            position: relative;
+            overflow: hidden;
+        }
+        h1 {
+            color: #2e5b9c;
+            font-size: 2.2rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+            z-index: 1;
+            position: relative;
+        }
+        h2 {
+            color: #2e5b9c;
+            font-size: 1.25rem;
+            margin-top: 36px;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+        .img-section {
+            margin-bottom: 36px;
+        }
+        img {
+            max-width: 100%;
+            border-radius: 10px;
+            border: 1.5px solid #e3eaf2;
+            box-shadow: 0 2px 8px rgba(46,91,156,0.09);
+            margin: 12px 0 0 0;
+            background: #f7fafc;
+        }
+        @media (max-width: 600px) {
+            .container {
+                max-width: 99vw;
+                padding: 18px 2vw 18px 2vw;
+            }
+            h1 {
+                font-size: 1.3rem;
+            }
+            h2 {
+                font-size: 1.05rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Fraud Detection Report</h1>
+        <div class="img-section">
+            <h2>1. Total Fraud Amount by Range</h2>
+            <img src="/sus/image/fraud_amount_by_bank.png" alt="Fraud Amount by Range">
+        </div>
+        <div class="img-section">
+            <h2>2. Fraud Amount Distribution by Sender Bank</h2>
+            <img src="/sus/image/fraud_amount_by_range.png" alt="Fraud Amount by Sender Bank">
+        </div>
+        <div class="img-section">
+            <h2>3. Transaction Frequency Over Time</h2>
+            <img src="/sus/image/transaction_frequency.png" alt="Transaction Frequency Over Time">
+        </div>
+    </div>
+</body>
+</html>
